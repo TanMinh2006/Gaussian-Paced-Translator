@@ -5,11 +5,11 @@
 Điểm khác biệt nằm ở **tư duy vận hành**: Hệ thống không gửi request liên tục mà có "nhịp thở" dựa trên Công thức hàm mật độ xác suất Phân phối chuẩn (Gaussian Distribution)
 
 ## Tại sao lại dùng Gauss?
-Thay vì nghỉ một khoảng thời gian cố định (dễ bị nhận diện là bot), công cụ này mô phỏng hành vi con người:
+Thay vì nghỉ một khoảng thời gian cố định, công cụ này mô phỏng hành vi con người:
 - Có lúc đọc nhanh, có lúc đọc chậm.
 - Đảm bảo hạ tầng Google không bị quá tải đột ngột.
 - Tối ưu hóa tài nguyên Cloud một cách văn minh.
-
+Chỉ là giao tiếp với hệ thống một cách văn minh và lịch sự, nếu coi đây là phá hoại thì sẽ không có ý tưởng này. Có thể là tôi nghĩ vậy.
 ## Triết lý của tác giả
 > "Cú pháp tôi có thể tra, nhưng nhịp thở hình chuông này là của tôi." - Một kẻ tự do về tâm hồn, yêu toán ứng dụng. Nhớ lấy điều đó!
 
