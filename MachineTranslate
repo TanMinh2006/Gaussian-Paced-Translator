@@ -1,0 +1,79 @@
+from googletrans import Translator
+from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
+# sentence_bleu: Hàm tính điểm tương đồng giữa bản dịch máy và bản dịch người theo chuẩn quốc tế.
+# SmoothingFunction: Công cụ "làm mượt" để tránh việc điểm bị về 0 khi câu dịch quá ngắn.
+import numpy as np # Áp dụng kiến thức toán ứng dụng.
+import time
+import matplotlib.pyplot as plt # Vẽ đồ thị hình chuông với công thức Gauss
+
+# Khởi tạo
+translator = Translator()
+cc = SmoothingFunction()
+smoothie = cc.method1
+
+# 1. Nhập nội dung cần dịch
+text_to_translate = input("Nhập nội dung cần dịch: ")
+
+try:
+    # 2. Máy dịch
+    translated = translator.translate(text_to_translate, dest='ja', src='vi')
+
+    # Gán kết quả vào biến để tính BLEU
+    machine_output = translated.text
+
+    print(f"Nội dung gốc: {translated.origin}")
+    print(f"Bản dịch ({translated.dest}): {machine_output}")
+
+    # 3. Nhập bản dịch chuẩn (con người) từ bàn phím để chấm điểm
+    reference_input = input("Nhập bản dịch chuẩn để đối chiếu: ")
+
+    # 4. Xử lý chuỗi (Tách từng ký tự vì có một số ngôn ngữ không có dấu cách)
+    candidate = list(machine_output)
+    reference = [list(reference_input)]
+
+    # 5. Tính điểm BLEU
+    score = sentence_bleu(reference, candidate, smoothing_function=smoothie) # type: ignore
+
+    print(f"\n--- Kết quả chấm điểm ---")
+    print(f"Điểm BLEU: {score:.4f}")
+
+    if score > 0.7:
+        print("Đánh giá: Bản dịch rất sát!")
+    elif score > 0.4:
+        print("Đánh giá: Bản dịch tạm ổn.")
+    else:
+        print("Đánh giá: Bản dịch chưa khớp nhiều.")
+
+    # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn
+    # loc = 2.0 (Kỳ vọng nghỉ 2s), scale = 0.5 (Độ lệch chuẩn)
+    loc = 2.0
+    scale = 0.5
+
+    # Nút chặn con người
+    actual_loc = max(1.5,loc)
+    actual_scale = max(0.1, scale)
+    # Tính toán lần cuối
+    delay = np.random.normal(loc = actual_loc,scale = actual_scale)
+    actual_sleep = max(0.5,delay)
+    # Đảm bảo thời gian nghỉ không bị âm (vì tính chất phân phối chuẩn)
+    print(f"\n[Hệ thống] Đang tối ưu hóa tài nguyên Cloud (Nghỉ {actual_sleep:.2f}s)...")
+    time.sleep(actual_sleep)
+    # TRỰC QUAN HÓA (Phần mới thêm)
+    # Tạo 1000 mẫu thử mô phỏng hàng ngàn request theo công thức Gauss
+    data = np.random.normal(2.0, 0.5, 1000)
+
+    # Vẽ biểu đồ tần suất (Histogram)
+    plt.figure(num="Mô phỏng nhịp thở hệ thống - Gauss Distribution")
+    plt.hist(data, bins=30, density=True, alpha=0.6, color='g', edgecolor='black')
+
+
+    plt.title("Phân phối thời gian nghỉ của Request (Gauss)")
+    plt.xlabel("Giây (s)")
+    plt.ylabel("Tần suất")
+
+    # Hiển thị ra cửa sổ ảnh
+    plt.show()
+except Exception as e:
+    print(f"Có lỗi xảy ra: {e}")
+
+
