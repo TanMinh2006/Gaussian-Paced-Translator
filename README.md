@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 Đây là một công cụ CLI dịch thuật đơn giản sử dụng `googletrans`. 
-Điểm khác biệt nằm ở **tư duy vận hành**: Hệ thống không gửi request liên tục mà có "nhịp thở" dựa trên **Phân phối chuẩn (Gaussian Distribution)**.
+Điểm khác biệt nằm ở **tư duy vận hành**: Hệ thống không gửi request liên tục mà có "nhịp thở" dựa trên Công thức hàm mật độ xác suất Phân phối chuẩn (Gaussian Distribution)
 
 ## Tại sao lại dùng Gauss?
 Thay vì nghỉ một khoảng thời gian cố định (dễ bị nhận diện là bot), công cụ này mô phỏng hành vi con người:
@@ -11,7 +11,7 @@ Thay vì nghỉ một khoảng thời gian cố định (dễ bị nhận diện
 - Tối ưu hóa tài nguyên Cloud một cách văn minh.
 
 ## Triết lý của tác giả
-> "Cú pháp tôi có thể tra, nhưng nhịp thở hình chuông này là của tôi." - Một kẻ tự do về tâm hồn.
+> "Cú pháp tôi có thể tra, nhưng nhịp thở hình chuông này là của tôi." - Một kẻ tự do về tâm hồn, yêu toán ứng dụng. Nhớ lấy điều đó!
 
 ## Cách sử dụng
 1. Cài đặt thư viện: `pip install googletrans numpy nltk matplotlib`
@@ -19,4 +19,13 @@ Thay vì nghỉ một khoảng thời gian cố định (dễ bị nhận diện
 
 ## Bản quyền (License)
 Dự án sử dụng giấy phép **GNU GPLv3**. Cấm các hành vi lợi dụng code để tạo bot phá hoại hạ tầng.
+
+---
+## Lời nhắn nhủ từ một kẻ tự do tâm hồn
+Đây không phải hành vi phá hoại hệ thống, nhớ lấy điều đó. Khi bạn sử dụng cho mục đích phá hoại, thì những hộ vệ của công lý đều soi vào bạn.
+Mỗi dòng code tồn tại đều có lý do. Những con người theo trí tuệ nhân tạo còn gặp khó vì OpenNMT quá đỗi cổ đại, thì tôi cũng vậy.
+Tôi ở đây là vì OpenNMT đã trả kết quả Unknown lần thứ 3 khiến tôi không thể giữ được bình tĩnh nữa. Sự sáng tạo vĩ đại nhất, thường đến từ những khoảnh khắc chứng kiến cả thế giới sụp đổ mà không thể làm gì, nó quá tuyệt vọng phải không?
+Tôi đã tìm thấy thư viện googletrans như một giải pháp tốt hơn, tuy nhiên hệ thống dịch máy đơn giản ban đầu có tần suất request dạng thẳng tắp.
+Ồ, vậy chúng ta làm gì? Một ý tưởng điên rồ xuất hiện sau khi tôi nghiên cứu về công thức hàm mật độ xác suất Gauss, là tôi có thể kết hợp thư viện googletrans với công thức đó. Dù không ai dạy, nhưng đó là niềm tự hào của tôi. Nếu bạn thấy dự án này khiến bạn rục rịch về những ý tưởng điên rồ hơn, thì hãy thử kết hợp những kiến thức bạn đã học, có thể tạo ra những điều bất ngờ. Vật lý giải thích nguyên lý của vũ trụ, mà vũ trụ lại là Toán học.
+"Bà tôi từng nói: Kẻ tầm thường copy code, kẻ giỏi tra syntax, nhưng bậc thầy là kẻ biết biến những con số khô khan thành nhịp đập của sự sống."
 
