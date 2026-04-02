@@ -34,5 +34,6 @@ Một lần nữa thì tôi xin cảm ơn người bạn Vũ Hữu Khánh cùng 
 
 ## Châm ngôn nhẹ nhàng
 Googletrans đã ra đời được 11 năm nhờ các lập trình viên tài hoa. Đúng, câu chuyện về googletrans là do mọi người viết lên, nhưng hồi kết của câu chuyện sẽ do tôi quyết định.
+"Tôi không biết nó đáng giá bao nhiêu đô, vì tôi bận dùng nó để xoay chuyển thế giới rồi."
 ## Mốc thời gian
 Dự án này được hình thành vào 31/03/2026 - 01/04/2026
