@@ -30,7 +30,7 @@ Tôi đã tìm thấy thư viện googletrans như một giải pháp tốt hơn
 "Bà tôi từng nói: Kẻ tầm thường copy code, kẻ giỏi tra syntax, nhưng bậc thầy là kẻ biết biến những con số khô khan thành nhịp đập của sự sống."
 
 ## Lời cảm ơn
-Một lần nữa thì tôi xin cảm ơn người bạn Vũ Hữu Khánh cùng lớp thiết kế game khoá 25 ở Đại Học Hải Phòng đã giúp tôi biết thêm kiến thức về Java, Web, Operating System, Network,SQL. Cảm ơn Google vì đã cho tôi kế thừa bộ não vĩ đại nhất thế giới công nghệ, cảm ơn ông Carl Friedrich Gauss - một nhà toán học lỗi lạc đã giúp tôi mở mang tầm mắt về toán học.
+Một lần nữa thì tôi xin cảm ơn người bạn Vũ Hữu Khánh cùng lớp thiết kế game khoá 25 ở Đại Học Hải Phòng đã giúp tôi biết thêm kiến thức về Java, Web, Operating System, Network,SQL. Cảm ơn Google vì đã cho tôi kế thừa bộ não vĩ đại nhất thế giới công nghệ, cảm ơn ông Carl Friedrich Gauss - một nhà toán học lỗi lạc đã giúp tôi mở mang tầm mắt về toán học. Cảm ơn thầy Hồ Phi Tứ dạy bộ môn xác suất thống kê của trường ĐH Hải Phòng đã dẫn dắt tôi tiếp tục đam mê Toán học.
 
 ## Mốc thời gian
-Dự án này được hình thành vào 31/03 - 01/04
+Dự án này được hình thành vào 31/03/2026 - 01/04/2026
