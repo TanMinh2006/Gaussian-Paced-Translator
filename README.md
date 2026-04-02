@@ -32,5 +32,7 @@ Tôi đã tìm thấy thư viện googletrans như một giải pháp tốt hơn
 ## Lời cảm ơn
 Một lần nữa thì tôi xin cảm ơn người bạn Vũ Hữu Khánh cùng lớp thiết kế game khoá 25 ở Đại Học Hải Phòng đã giúp tôi biết thêm kiến thức về Java, Web, Operating System, Network,SQL. Cảm ơn Google vì đã cho tôi kế thừa bộ não vĩ đại nhất thế giới công nghệ, cảm ơn ông Carl Friedrich Gauss - một nhà toán học lỗi lạc đã giúp tôi mở mang tầm mắt về toán học. Cảm ơn thầy Hồ Phi Tứ dạy bộ môn xác suất thống kê của trường ĐH Hải Phòng đã dẫn dắt tôi tiếp tục đam mê Toán học.
 
+## Châm ngôn nhẹ nhàng
+Googletrans đã ra đời được 11 năm nhờ các lập trình viên tài hoa. Đúng, câu chuyện về googletrans là do mọi người viết lên, nhưng hồi kết của câu chuyện sẽ do tôi quyết định.
 ## Mốc thời gian
 Dự án này được hình thành vào 31/03/2026 - 01/04/2026
