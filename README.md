@@ -14,7 +14,7 @@ Chỉ là giao tiếp với hạ tầng Google một cách văn minh và lịch 
 > "Cú pháp tôi có thể tra, nhưng nhịp thở hình chuông này là của tôi." - Chỉ là một kẻ yêu thích sự tự do và Toán học thôi, nhớ lấy điều đó!
 
 ## Cách sử dụng
-1. Cài đặt thư viện: `pip install googletrans numpy nltk matplotlib`
+1. Cài đặt thư viện: `pip install googletrans asyncio nltk matplotlib`
 2. Chạy file: `python your_file_name.py`
 
 ## Bản quyền (License)
