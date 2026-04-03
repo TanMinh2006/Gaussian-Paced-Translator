@@ -43,12 +43,12 @@ async def main():
        else:
          print("Đánh giá: Bản dịch chưa khớp nhiều.")
 
-       # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn
+       # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn điều hoà dữ liệu hạ tầng
        # loc = 2.0 (Kỳ vọng nghỉ 2s), scale = 0.5 (Độ lệch chuẩn)
        loc = 2.0
        scale = 0.5
 
-       # Nút chặn con người
+       # Nút chặn đạo đức con người, thay đổi mà không suy nghĩ là tự đưa mình ra trước toà án
        actual_loc = max(1.5,loc)
        actual_scale = max(0.1, scale)
        # Tính toán lần cuối
