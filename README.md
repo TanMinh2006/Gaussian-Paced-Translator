@@ -23,7 +23,7 @@ Dự án sử dụng giấy phép **GNU GPLv3**. Cấm các hành vi lợi dụn
 ---
 ## Lời nhắn nhủ từ một kẻ yêu thích sự tự do
 Đây không phải hành vi phá hoại hạ tầng Google, nhớ lấy điều đó. Khi bạn sử dụng cho mục đích phá hoại, thì những hộ vệ của công lý đều soi vào bạn.
-Mỗi dòng code tồn tại đều có lý do. Những con người theo trí tuệ nhân tạo còn gặp khó vì OpenNMT quá đỗi cổ đại, thì tôi cũng vậy.
+Có những dòng code không nên viết, và có những dòng code không nên sửa linh tinh. Những con người theo trí tuệ nhân tạo còn gặp khó vì OpenNMT quá đỗi cổ đại, thì tôi cũng vậy.
 Tôi ở đây là vì OpenNMT đã trả kết quả Unknown lần thứ 3 khiến tôi không thể giữ được bình tĩnh nữa. Sự sáng tạo vĩ đại nhất, thường đến từ những khoảnh khắc chứng kiến cả thế giới sụp đổ mà không thể làm gì, nó quá tuyệt vọng phải không?
 Tôi đã tìm thấy thư viện googletrans như một giải pháp tốt hơn, tuy nhiên hệ thống dịch máy đơn giản ban đầu có tần suất request dạng thẳng tắp.
 Ồ, vậy chúng ta làm gì? Một ý tưởng điên rồ xuất hiện sau khi tôi nghiên cứu về công thức hàm mật độ xác suất Gauss, là tôi có thể kết hợp thư viện googletrans với công thức đó và bùm, kết quả là một đồ thị hình chuông Gauss vĩ đại và mang vẻ đẹp toán học. Dù không ai dạy, nhưng đó là niềm tự hào của tôi. Nếu bạn thấy dự án này khiến bạn rục rịch về những ý tưởng điên rồ hơn, thì hãy thử kết hợp những kiến thức bạn đã học, có thể tạo ra những điều bất ngờ. Vật lý giải thích nguyên lý của vũ trụ, mà vũ trụ lại là Toán học.
