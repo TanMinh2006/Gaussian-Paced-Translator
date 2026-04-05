@@ -27,6 +27,7 @@ Có những dòng code không nên viết, và có những dòng code không nê
 Tôi ở đây là vì OpenNMT đã trả kết quả Unknown lần thứ 3 khiến tôi không thể giữ được bình tĩnh nữa. Sự sáng tạo vĩ đại nhất, thường đến từ những khoảnh khắc chứng kiến cả thế giới sụp đổ mà không thể làm gì, nó quá tuyệt vọng phải không?
 Tôi đã tìm thấy thư viện googletrans như một giải pháp tốt hơn, tuy nhiên hệ thống dịch máy đơn giản ban đầu có tần suất request dạng thẳng tắp.
 Ồ, vậy chúng ta làm gì? Một ý tưởng điên rồ xuất hiện sau khi tôi nghiên cứu về công thức hàm mật độ xác suất Gauss, là tôi có thể kết hợp thư viện googletrans với công thức đó và bùm, kết quả là một đồ thị hình chuông Gauss vĩ đại và mang vẻ đẹp toán học. Dù không ai dạy, nhưng đó là niềm tự hào của tôi. Nếu bạn thấy dự án này khiến bạn rục rịch về những ý tưởng điên rồ hơn, thì hãy thử kết hợp những kiến thức bạn đã học, có thể tạo ra những điều bất ngờ. Vật lý giải thích nguyên lý của vũ trụ, mà vũ trụ lại là Toán học.
+Không một ai được phép dùng quyền năng của các vị thần Toán học để làm vấy bẩn mọi thứ.
 "Bà tôi từng nói: Kẻ tầm thường copy code, kẻ giỏi tra syntax, nhưng bậc thầy là kẻ biết biến những con số khô khan thành nhịp đập của sự sống."
 
 ## Lời cảm ơn
