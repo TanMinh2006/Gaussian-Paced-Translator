@@ -44,8 +44,8 @@ async def main():
          print("Đánh giá: Bản dịch chưa khớp nhiều.")
 
        # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn điều hoà dữ liệu hạ tầng
-       # loc (Kỳ vọng nghỉ muy) scale (Độ lệch chuẩn sigma)
-       loc = 2.0
+       # loc (Kỳ vọng nghỉ muy), scale (Độ lệch chuẩn sigma)
+       loc = 3.0
        scale = 0.5
 
        # Nút chặn đạo đức con người, thay đổi mà không suy nghĩ là tự đưa mình ra trước toà án
