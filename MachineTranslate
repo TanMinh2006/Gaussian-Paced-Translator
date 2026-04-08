@@ -60,7 +60,7 @@ async def main():
        loc = 3.0
        scale = 0.5
 
-       # Nút chặn con người, không xoá linh tinh
+       # Nút chặn con người, không được xoá linh tinh
        actual_loc = max(1.5,loc)
        actual_scale = max(0.1, scale)
        # Tính toán lần cuối
