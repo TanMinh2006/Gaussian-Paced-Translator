@@ -74,24 +74,27 @@ async def main():
        time_series = np.random.normal(delay,0.1,1000)
        fourier_transform = fft(time_series)
        print(f"[Fourier] Đã lọc nhiễu hệ thống. Tần số ổn định tại: {np.abs(fourier_transform[1]): .2f}Hz")
-       # TRỰC QUAN HÓA (Phần mới thêm)
-       # Tạo 1000 mẫu thử mô phỏng hàng ngàn request theo công thức Gauss
-       data = np.random.normal(2.0, 0.5, 1000)
+       # --- PHẦN VẼ ĐỒ THỊ ---
+       plt.figure(figsize=(12, 5), num="Mô phỏng nhịp thở hệ thống - Phù thuỷ Toán học")
 
-       # Vẽ biểu đồ tần suất (Histogram)
-       plt.figure(num="Mô phỏng nhịp thở hệ thống - Gauss Distribution")
-       plt.hist(data, bins=30, density=True, alpha=0.6, color='g', edgecolor='black')
-
-       # Biểu đồ Gauss
-       plt.title("Phân phối thời gian nghỉ của Request (Gauss)")
+       # Biểu đồ 1: Phân phối Gauss (Nhịp thở hệ thống)
+       plt.subplot(1, 2, 1)
+       # Sử dụng chính actual_loc và actual_scale để vẽ cho đồng bộ
+       gauss_data = np.random.normal(actual_loc, actual_scale, 1000)
+       plt.hist(gauss_data, bins=30, density=True, alpha=0.6, color='g', edgecolor='black')
+       plt.title(f"Phân phối Gauss (muy={actual_loc}, sigma={actual_scale})")
        plt.xlabel("Giây (s)")
        plt.ylabel("Tần suất")
 
-       # Biểu đồ Fourier
-       plt.subplot(1,2,2)
-       plt.plot(np.abs(fourier_transform[:50]), color = 'r')
-       plt.title("Phổ Fourier (Lọc nhiễu)")
-       # Hiển thị ra cửa sổ ảnh
+       # Biểu đồ 2: Phổ Fourier (Lọc nhiễu hệ thống)
+       plt.subplot(1, 2, 2)
+       # Bỏ qua phần tử đầu tiên [:50] -> [1:50] để thấy rõ các tần số nhiễu!
+       plt.plot(np.abs(fourier_transform[1:50]), color='r')
+       plt.title("Phổ Fourier (Magnitude Spectrum - Bỏ DC)")
+       plt.xlabel("Tần số (Hz)")
+       plt.ylabel("Cường độ")
+
+       plt.tight_layout()
        plt.show()
    except Exception as e:
        print(f"Có lỗi xảy ra: {e}")
