@@ -8,10 +8,7 @@ import asyncio
 from scipy.fft import fft
 # Khởi tạo
 async def main():
-   custom_headers = {
-       'User-Agent': 'Optimization-Mathematics-Wizard/1.0 (Contact: tminh20012@gmail.com)'
-   }
-   translator = Translator(user_agent= custom_headers['User-Agent'])
+   translator = Translator()
    cc = SmoothingFunction()
    smoothie = cc.method1
 
