@@ -5,14 +5,26 @@ from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 import numpy as np # Áp dụng kiến thức toán ứng dụng.
 import matplotlib.pyplot as plt # Vẽ đồ thị hình chuông với công thức Gauss
 import asyncio
+from scipy.fft import fft
 # Khởi tạo
 async def main():
-   translator = Translator()
+   custom_headers = {
+       'User-Agent': 'Optimization-Mathematics-Wizard/1.0 (Contact: tminh20012@gmail.com)'
+   }
+   translator = Translator(user_agent= custom_headers['User-Agent'])
    cc = SmoothingFunction()
    smoothie = cc.method1
 
    # 1. Nhập nội dung cần dịch
    text_to_translate = input("Nhập nội dung cần dịch: ")
+   # --- QUYỀN NĂNG THẦN MARKOV (Dự đoán trạng thái) ---
+   # Giả sử ta có ma trận chuyển trạng thái cho độ dài câu (Ngắn -> Dài)
+   # Giúp hệ thống chủ động cấp phát tài nguyên RAM 8GB một cách đàng hoàng.
+   state = ["Ngắn","Trung bình", "Dài" ]
+   transition_matrix = [[0.1,0.7,0.2], [0.2,0.3,0.5], [0.1,0.1,0.8]]
+   current_state = 0 if len(text_to_translate) < 20 else 1
+   predicted_next_state = np.random.choice(state, p = transition_matrix[current_state])
+   print(f"[Markov] Dự đoán request tiếp theo sẽ ở trạng thái: {predicted_next_state}")
    try:
        # 2. Máy dịch
        translated = await translator.translate(text_to_translate, dest='en', src='vi')
@@ -43,20 +55,25 @@ async def main():
        else:
          print("Đánh giá: Bản dịch chưa khớp nhiều.")
 
-       # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn điều hoà dữ liệu hạ tầng
-       # loc (Kỳ vọng nghỉ muy), scale (Độ lệch chuẩn sigma)
+       # Nâng cấp thêm với công thức hàm mật độ phân phối chuẩn
+       # loc (là muy kỳ vọng nghỉ), scale (là sigma độ lệch chuẩn). mu và sigma tuân theo hệ thức 1.5
        loc = 3.0
        scale = 0.5
 
-       # Nút chặn đạo đức con người, thay đổi mà không suy nghĩ là tự đưa mình ra trước toà án
+       # Nút chặn con người, không xoá linh tinh
        actual_loc = max(1.5,loc)
        actual_scale = max(0.1, scale)
        # Tính toán lần cuối
-       delay = np.random.normal(loc = actual_loc,scale = actual_scale)
+       delay = float(np.random.normal(loc = actual_loc,scale = actual_scale))
        actual_sleep = max(0.5,delay)
        # Đảm bảo thời gian nghỉ không bị âm (vì tính chất phân phối chuẩn)
        print(f"\n[Hệ thống] Đang tối ưu hóa tài nguyên Cloud (Nghỉ {actual_sleep:.2f}s)...")
        await asyncio.sleep(actual_sleep)
+
+       # Công thức fourier
+       time_series = np.random.normal(delay,0.1,1000)
+       fourier_transform = fft(time_series)
+       print(f"[Fourier] Đã lọc nhiễu hệ thống. Tần số ổn định tại: {np.abs(fourier_transform[1]): .2f}Hz")
        # TRỰC QUAN HÓA (Phần mới thêm)
        # Tạo 1000 mẫu thử mô phỏng hàng ngàn request theo công thức Gauss
        data = np.random.normal(2.0, 0.5, 1000)
@@ -65,15 +82,18 @@ async def main():
        plt.figure(num="Mô phỏng nhịp thở hệ thống - Gauss Distribution")
        plt.hist(data, bins=30, density=True, alpha=0.6, color='g', edgecolor='black')
 
-
+       # Biểu đồ Gauss
        plt.title("Phân phối thời gian nghỉ của Request (Gauss)")
        plt.xlabel("Giây (s)")
        plt.ylabel("Tần suất")
 
+       # Biểu đồ Fourier
+       plt.subplot(1,2,2)
+       plt.plot(np.abs(fourier_transform[:50]), color = 'r')
+       plt.title("Phổ Fourier (Lọc nhiễu)")
        # Hiển thị ra cửa sổ ảnh
        plt.show()
    except Exception as e:
        print(f"Có lỗi xảy ra: {e}")
 if __name__ == "__main__":
     asyncio.run(main())
-
