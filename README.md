@@ -42,3 +42,6 @@ Googletrans đã ra đời được 11 năm nhờ các lập trình viên tài h
 " Thế giới sẽ xoay chuyển thêm một lần nữa, tôi không biết có bài báo hay giáo trình và hướng dẫn nào nói về điều này đâu. "
 ## Mốc thời gian
 Dự án này được hình thành vào 31/03/2026 - 01/04/2026
+## Cập nhật
+Thư viện asyncio (03/04/2026)
+Công thức Markov, Fourier (08/04/2026)
